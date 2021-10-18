@@ -23,9 +23,9 @@ function losses() {
 
 // Create variables that target elements with the following IDs: 'message', 'wins', 'losses'
 
-var.getElementById = 'message',
-.getElementById = 'wins',
-.getElementById = 'losses';
+var message = 'message',
+    wins = 'wins',
+    losses = 'losses';
 
 // target all .box elements and attach a click event listener to each one using a loop
 
