@@ -15,22 +15,32 @@ header{
   max-width: 100%;
 }
 
+.message {
+  margin: auto;
+}
+
 .boxes {
   display: flex;
+  margin: auto;
 }
 
 .box {
   color: #6003c3;
+  margin: auto;
+  justify-content: center;
 }
 
 .box-1 {
-  background-color: #FCFF00;
+  background: #FCFF00;
+  padding: 24px 100px;
 }
 
 .box-2 {
-  background-color: #57FFC9;
+  background: #57FFC9;
+  padding: 24px 100px;
 }
 
 .box-3 {
-  background-color: #A5FF01;
+  background: #A5FF01;
+  padding: 24px 100px;
 }

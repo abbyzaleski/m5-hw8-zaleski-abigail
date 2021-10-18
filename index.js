@@ -1,5 +1,11 @@
 // Create an Array of at least 3 losing messages
 
+const losses = [
+    "Try again next time", 
+    "Too bad, so sad", 
+    "Not a winner this time"
+];
+
 // Create variables to count wins and losses
 
 // Create variables that target elements with the following IDs: 'message', 'wins', 'losses'
