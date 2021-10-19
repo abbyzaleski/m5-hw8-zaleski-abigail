@@ -8,30 +8,40 @@ const losses = [
 
 // Create variables to count wins and losses
 
-var wins = 0,
-    losses = 0;
+var winCount = 0,
+    lossCount = 0;
 
-function wins() {
-    wins += 1;
-    document.getElementById('wins').innerHTML = wins;
+function displayWin() {
+    winCount += 1;
+    document.getElementById('wins').innerHTML = "Wins:" + winCount;
+    document.getElementById('message').textContent = "You are a winner!";
 }
 
-function losses() {
-    losses += 1;
-    document.getElementById('losses').innerHTML = losses;
+function displayLoss() {
+    lossCount += 1;
+    document.getElementById('losses').innerHTML = "Losses:" + lossCount;
+    document.getElementById('message').textContent = losses[Math.floor(Math.random() * 3)];
 }
 
 // Create variables that target elements with the following IDs: 'message', 'wins', 'losses'
 
-var message = 'message',
-    wins = 'wins',
-    losses = 'losses';
 
 // target all .box elements and attach a click event listener to each one using a loop
 
 document.querySelectorAll('.box').forEach(item => {
     item.addEventListener('click', event => {
-        //handle click
+
+        var numberClicked = Number(event.target.textContent)
+
+        var winningBoxNumber = Math.floor((Math.random() * 3) + 1);
+        console.log(winningBoxNumber)
+
+        if (numberClicked === winningBoxNumber) {
+            displayWin()
+        }
+        else {
+            displayLoss()
+        }
     })
 })
 
@@ -39,17 +49,11 @@ document.querySelectorAll('.box').forEach(item => {
 // determine which box was clicked with 'this.textContent' or event.target.textContent
 // convert that value to a Number and store it to a variable
 
+
+
 // create a random number between 1-3 and store it to a variable
 // This number will represent the winning box
 
-public class generate_random_between_two_number {
-	public static void main(String[] args) {
-
-		System.out.println(
-				((int) (Math.random() * (3 - 1))) + 1);
-
-	}
-}
 
 // determine if the box clicked is equal to the random number
 // if the numbers match, display a winning message by changing the text content of the div#message element
